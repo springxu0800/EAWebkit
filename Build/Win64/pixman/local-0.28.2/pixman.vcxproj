@@ -21,7 +21,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'pc64-vc-dev-debug|x64' " Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v100</PlatformToolset>
     <UseNativeEnvironment>true</UseNativeEnvironment>
@@ -77,12 +77,15 @@
       <Command>@if not exist "pc64-vc-dev-debug\lib" mkdir "pc64-vc-dev-debug\lib" &amp; SET ERRORLEVEL=0
 @if not exist "pc64-vc-dev-debug\build\pixman" mkdir "pc64-vc-dev-debug\build\pixman" &amp; SET ERRORLEVEL=0</Command>
     </PreBuildEvent>
+    <Link>
+      <ModuleDefinitionFile>C:\work\15.1.1.1.0\pixman.def</ModuleDefinitionFile>
+    </Link>
   </ItemDefinitionGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'pc64-vc-dev-debug|x64' ">
     <OutDir>pc64-vc-dev-debug\lib\</OutDir>
     <IntDir>pc64-vc-dev-debug\build\pixman\vstmp\</IntDir>
     <TargetName>pixman</TargetName>
-    <TargetExt>.lib</TargetExt>
+    <TargetExt>.dll</TargetExt>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <IncludePath>$(IncludePath)</IncludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
@@ -199,7 +202,8 @@
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties platform_pc64-vc-dev-debug_x64="vc64" vc64-compiler="$(VSInstallDir)\VC\BIN\x86_amd64\cl.exe" vc64-compiler_clang="" vc64-asm="$(VSInstallDir)\VC\BIN\x86_amd64\ml64.exe" vc64-librarian="$(VSInstallDir)\VC\BIN\x86_amd64\lib.exe" platform_pc64-vc-dev-opt_x64="vc64" build.env.PATH="$(VSInstallDir)\\VC\BIN;$(VSInstallDir)\\Common7\IDE"></UserProperties>
+      <UserProperties platform_pc64-vc-dev-debug_x64="vc64" vc64-compiler="$(VSInstallDir)\VC\BIN\x86_amd64\cl.exe" vc64-compiler_clang="" vc64-asm="$(VSInstallDir)\VC\BIN\x86_amd64\ml64.exe" vc64-librarian="$(VSInstallDir)\VC\BIN\x86_amd64\lib.exe" platform_pc64-vc-dev-opt_x64="vc64" build.env.PATH="$(VSInstallDir)\\VC\BIN;$(VSInstallDir)\\Common7\IDE">
+      </UserProperties>
     </VisualStudio>
   </ProjectExtensions>
 </Project>

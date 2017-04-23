@@ -1138,3 +1138,41 @@ pixman_compute_composite_region (pixman_region16_t * region,
     pixman_region32_fini (&r32);
     return retval;
 }
+
+void *pixman_malloc(size_t size)
+{
+	//return EA::WebKit::spEAWebKitAllocator->Malloc(size, 0, "EAWebKit/Pixman");
+#if defined(_MSC_VER)
+	return	_aligned_malloc(size, 8); //8 byte alignment on 32 bit
+#elif defined(__GNUC__)
+	return malloc(size);
+#endif
+}
+
+void *pixman_calloc(size_t num, size_t size)
+{
+	void* p = pixman_malloc(num * size);
+	if(p)
+		memset(p, 0, num * size);
+
+	return p;
+}
+
+void* pixman_realloc(void* p, size_t size)
+{
+	//return EA::WebKit::spEAWebKitAllocator->Realloc(p,size,0);
+#if defined(_MSC_VER)
+	return _aligned_realloc(p, size, 1);
+#elif defined(__GNUC__)
+	return realloc(p, size);
+#endif
+}
+void pixman_free(void *p)
+{
+	//EA::WebKit::spEAWebKitAllocator->Free(p, 0);
+#if defined(_MSC_VER)
+	_aligned_free(p);
+#elif defined(__GNUC__)
+	free(p);
+#endif
+}

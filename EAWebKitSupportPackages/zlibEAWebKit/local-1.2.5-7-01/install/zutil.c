@@ -302,3 +302,29 @@ void ZLIB_INTERNAL zcfree (voidpf opaque, voidpf ptr)
 }
 
 #endif /* MY_ZCALLOC */
+
+
+void* zcalloc(void* opaque, unsigned items, unsigned size)
+{
+	//void* p = EA::WebKit::spEAWebKitAllocator->Malloc(items * size,0,0);
+#if defined(_MSC_VER)
+	void* p = _aligned_malloc(size * items, 8); //8 byte alignment on 32 bit
+#elif defined(__GNUC__)
+	void* p = malloc(size * items);
+#endif
+	if(p)
+		memset(p, 0, items * size);
+	return (void*)p;
+}
+
+void zcfree(void* opaque, void* ptr)
+{
+	(void)opaque;
+	//EA::WebKit::spEAWebKitAllocator->Free(ptr,0);
+
+#if defined(_MSC_VER)
+	_aligned_free(ptr);
+#elif defined(__GNUC__)
+	free(ptr);
+#endif
+}
