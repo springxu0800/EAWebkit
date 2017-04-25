@@ -1,0 +1,17 @@
+LIBRARY      libjpegWebKit.def
+EXPORTS
+	jpeg_save_markers							@1
+	jpeg_resync_to_restart				@2
+	jpeg_CreateDecompress					@3
+	jpeg_std_error								@4
+	jpeg_finish_decompress				@5
+	jpeg_input_complete						@6
+	jpeg_finish_output						@7
+	jpeg_start_output							@8
+	jpeg_consume_input						@9
+	jpeg_start_decompress					@10
+	jpeg_calc_output_dimensions		@11
+	jpeg_has_multiple_scans				@12
+	jpeg_read_header 							@13
+	jpeg_destroy_decompress				@14
+	jpeg_read_scanlines						@15

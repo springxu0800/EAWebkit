@@ -1,0 +1,13 @@
+LIBRARY      zlibEAWebKit.dll
+EXPORTS
+	crc32						@1
+	inflateReset		@2
+	inflate					@3
+	inflateInit_		@4
+	inflateEnd			@5
+	deflate					@6
+	deflateEnd			@7
+	deflateInit2_		@8
+	deflateReset		@9
+	inflateInit2_   @10
+	uncompress			@11
