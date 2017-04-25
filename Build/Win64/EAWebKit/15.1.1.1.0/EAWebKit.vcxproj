@@ -232,7 +232,7 @@
       <Project>{D0659AA8-5555-132C-4EF1-6B1F46177BC9}</Project>
       <Private>False</Private>
       <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
-      <LinkLibraryDependencies>True</LinkLibraryDependencies>
+      <LinkLibraryDependencies>False</LinkLibraryDependencies>
       <UseLibraryDependencyInputs>False</UseLibraryDependencyInputs>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
     </ProjectReference>

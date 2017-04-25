@@ -75,6 +75,9 @@
       <Command>@if not exist "pc64-vc-dev-debug\lib" mkdir "pc64-vc-dev-debug\lib" &amp; SET ERRORLEVEL=0
 @if not exist "pc64-vc-dev-debug\build\libjpegEAWebKit" mkdir "pc64-vc-dev-debug\build\libjpegEAWebKit" &amp; SET ERRORLEVEL=0</Command>
     </PreBuildEvent>
+    <Link>
+      <ModuleDefinitionFile>C:\work\15.1.1.1.0\libjpegEAWebKit.def</ModuleDefinitionFile>
+    </Link>
   </ItemDefinitionGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'pc64-vc-dev-debug|x64' ">
     <OutDir>pc64-vc-dev-debug\lib\</OutDir>

@@ -79,6 +79,7 @@
     </PreBuildEvent>
     <Link>
       <AdditionalDependencies>C:\work\15.1.1.1.0\build\Win64\pixman\local-0.28.2\pc64-vc-dev-debug\lib\pixman.lib;C:\work\15.1.1.1.0\Build\Win64\libpngEAWebKit\local-1.01.00-01\pc64-vc-dev-debug\lib\libpngEAWebKit.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>C:\work\15.1.1.1.0\cario.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'pc64-vc-dev-debug|x64' ">
