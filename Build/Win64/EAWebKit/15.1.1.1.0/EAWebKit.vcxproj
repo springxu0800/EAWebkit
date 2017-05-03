@@ -344,7 +344,7 @@
       <Project>{03994ABE-57B1-4D7C-896F-62AEE8658914}</Project>
       <Private>False</Private>
       <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
-      <LinkLibraryDependencies>False</LinkLibraryDependencies>
+      <LinkLibraryDependencies>True</LinkLibraryDependencies>
       <UseLibraryDependencyInputs>False</UseLibraryDependencyInputs>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
     </ProjectReference>
